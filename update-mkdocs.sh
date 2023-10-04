@@ -5,7 +5,7 @@ MKDOCS_PROJECT_DIR="/home/dhanush/Linux_Tutorial"
 
 # Replace the following variables with your Surge.sh details
 SURGE_LOGIN="dhanushkumar2811@gmail.com"
-SURGE_DOMAIN="kaniyam-linux-book.surge.sh" 
+SURGE_DOMAIN="kaniyanLinuxBook.surge.sh" 
 
 # Function to update the MkDocs documentation and deploy to Surge
 update_mkdocs_and_deploy() {
@@ -25,7 +25,9 @@ update_mkdocs_and_deploy() {
     cd site
 
     # Deploy the 'site' directory contents to Surge.sh
-    surge --project ./ --domain "$SURGE_DOMAIN"
+    echo "Deploying to Surge.sh..."
+    surge . "$SURGE_DOMAIN"
+    echo "Deployment to Surge.sh complete."
 }
 
 # Run the update and deploy function
